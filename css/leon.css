@@ -1,0 +1,90 @@
+/*Start Global Rules*/
+/* Box sizing on all elements*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* same font for all elements*/
+body {
+    font-family: "Work Sans", sans-serif;
+}
+/* parent to fill full screen*/
+/*.parent{
+    background-color: #eee;
+} */
+.container{
+    background-color: #999;
+    width:600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Media queries- responsive */
+/* Small */
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/*Medium */ 
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/*Large*/
+@media (min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+
+/*Start Global Rules*/
+/* start header*/
+/*Resize logo */
+.header .container .logo{
+    width:60px;
+}
+/* add padding to header (not to start from beginning)*/
+.header {
+    padding:20px;
+}
+/* Adjust header items*/
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.header .container .icons{
+    width:30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+/*set properties for all span elements*/
+.header .container .icons span{
+    height:2px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+.header .container .icons span:first-child{
+    width:100%;
+}
+.header .container .icons span:nth-child(2){
+    width:60%;
+    transition: 0.01s;
+}
+.header .container .icons span:last-child{
+    width:100%
+}
+/*make links relative position */ 
+.header.links{
+    position: relative;
+}
+/*apply transition when hover*/
+.header .links:hover .icons span:nth-child(2){
+    width: 100%;
+}
+/* end header*/
