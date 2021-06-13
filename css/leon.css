@@ -14,7 +14,7 @@ body {
     background-color: #eee;
 } */
 .container{
-    background-color: #999;
+    /*background-color: #999;*/
     width:600px;
     padding-left: 15px;
     padding-right: 15px;
@@ -57,7 +57,7 @@ body {
     justify-content: space-between;
     align-items:center;
 }
-.header .container .icons{
+.header .container .links .icons{
     width:30px;
     display: flex;
     flex-wrap: wrap;
@@ -80,11 +80,47 @@ body {
     width:100%
 }
 /*make links relative position */ 
-.header.links{
+.header .links{
     position: relative;
 }
 /*apply transition when hover*/
 .header .links:hover .icons span:nth-child(2){
     width: 100%;
+}
+.header .links ul{
+    background-color: #f6f6f6;
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:absolute;
+    right:0;
+    min-width: 200px;
+    top:calc(100% + 15px);
+    display:none;
+}
+.header .links ul a{
+    display:block;
+    padding:15px;
+    text-decoration: none;
+    color:#333;
+    transition:0.3s;
+}
+.header .links ul :not(:last-child) a{
+    border-bottom:1px solid #ddd;
+}
+.header .links ul li a:hover{ 
+    padding-left:25px
+}
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position:absolute;
+    right:5px;
+    top:-20px; 
+}
+.header .links:hover ul{
+    display:block;
 }
 /* end header*/
