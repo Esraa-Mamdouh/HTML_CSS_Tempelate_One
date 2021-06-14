@@ -1,3 +1,8 @@
+/*Start variables */
+:root{
+    --main-color:#10cab7;
+}
+/* End variables*/
 /*Start Global Rules*/
 /* Box sizing on all elements*/
 * {
@@ -74,7 +79,7 @@ body {
 }
 .header .container .icons span:nth-child(2){
     width:60%;
-    transition: 0.01s;
+    transition:0.3s;
 }
 .header .container .icons span:last-child{
     width:100%
@@ -97,6 +102,7 @@ body {
     min-width: 200px;
     top:calc(100% + 15px);
     display:none;
+    z-index: 1;
 }
 .header .links ul a{
     display:block;
@@ -124,3 +130,31 @@ body {
     display:block;
 }
 /* end header*/
+/* start landing */
+.landing {
+    background-image: url("../images/Screen-Shot-2019-09-24-at-10.25.10-AM.png");
+    background-size: cover;
+    height:calc(100vh - 64px);
+    position:relative;
+
+}
+.landing h1{
+    margin:0;
+    color:var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+.landing .intro-text {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+    width:320px;
+    max-width: 100%;
+}
+.landing .intro-text p{
+    font-size:19px;
+    line-height: 1.8;
+}
+/* end landing */
