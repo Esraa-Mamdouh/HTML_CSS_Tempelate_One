@@ -9,7 +9,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
+  }
 /* same font for all elements*/
 body {
     font-family: "Work Sans", sans-serif;
@@ -20,7 +20,6 @@ body {
 } */
 .container{
     /*background-color: #999;*/
-    width:600px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -28,23 +27,23 @@ body {
 }
 /*Media queries- responsive */
 /* Small */
-@media (min-width:768px){
-    .container{
-        width:750px;
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
     }
-}
-/*Medium */ 
-@media (min-width:992px){
-    .container{
-        width: 970px;
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
     }
-}
-/*Large*/
-@media (min-width:1200px){
-    .container{
-        width:1170px;
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
     }
-}
+  }
 
 /*Start Global Rules*/
 /* start header*/
@@ -68,6 +67,13 @@ body {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+/* .container .line{
+    background-color: red;
+    width:5px;
+    height:100%;
+    position:absolute;
+    left:750px
+}*/
 /*set properties for all span elements*/
 .header .container .icons span{
     height:2px;
@@ -131,8 +137,9 @@ body {
 }
 /* end header*/
 /* start landing */
+
 .landing {
-    background-image: url("../images/Screen-Shot-2019-09-24-at-10.25.10-AM.png");
+    background-image: url("../images/landing.jpg");
     background-size: cover;
     height:calc(100vh - 64px);
     position:relative;
@@ -157,4 +164,5 @@ body {
     font-size:19px;
     line-height: 1.8;
 }
+
 /* end landing */
