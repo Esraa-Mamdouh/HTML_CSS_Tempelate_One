@@ -1,8 +1,34 @@
 /*Start variables */
 :root{
     --main-color:#10cab7;
+    --secondary-color:#2c4755;
 }
 /* End variables*/
+
+/* Start Component  */
+.special-heading{
+    font-size:100px;
+    font-weight: 800;
+    color:#ebeced;;
+    text-align: center;
+    letter-spacing: -2px;
+    margin:0;
+}
+.special-heading + p{
+    text-align: center;
+    color:#575757;
+    margin-top:-27px;
+}
+@media(max-width: 768px) {
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p{
+        margin-top: -20px;
+    }
+}
+/* End Component  */
+
 /*Start Global Rules*/
 /* Box sizing on all elements*/
 * {
@@ -33,13 +59,13 @@ body {
     }
   }
   /* Medium */
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .container {
       width: 970px;
     }
   }
   /* Large */
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
     .container {
       width: 1170px;
     }
@@ -174,9 +200,10 @@ body {
 }
 .features .container {
     display:grid;
-    grid-template-columns: repeat(3,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     grid-gap:20px;
 }
+
 .features .container .feat{
    padding:20px;
    text-align: center;
@@ -194,3 +221,65 @@ body {
     font-size: 17px;
 }
 /* End features */
+/* Start Sections */
+/*Same as features*/
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px; 
+    /* background-color: rebeccapurple;*/
+}
+.services .service-content{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:50px;
+    margin-top: 100px;
+}
+.image-column img{
+    width:260px;
+    height: 100%
+}
+ .services .service-content .col .service{
+    display:flex;
+    margin-bottom:50px;
+    /*flex-flow: column; */
+}
+@media (max-width: 767px) {
+    .services .service-content .col .service {
+      flex-direction: column;
+      text-align: center;
+    }
+  } 
+.services .service-content .col .service i{
+    color: var(--main-color);
+    flex-basis: 60px;
+  }
+.services .service-content .col .service .text{
+    flex:1;
+  }
+.services .service-content .col .service .text h3{
+    margin: 0 0 20px;   /*top right down*/
+}
+.services .service-content .col .service .text p{
+    color:#777;
+    line-height: 1.6;
+    font-weight: 400;
+} 
+@media(max-width : 1199px){
+ .image-column {
+    display:none;}
+}
+.services .service-content .col .image-column{
+    text-align: center;
+    position:relative;
+}
+.services .service-content .col .image-column::before{
+    content: "";
+    background-color: var(--secondary-color);
+    width:100px;
+    height:calc(100% + 100px);
+    position:absolute;
+    right:0;
+    top:-50px;
+    z-index:-1;
+}
+/* End Sections */
