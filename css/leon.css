@@ -464,11 +464,11 @@ html{
         font-size: 22px;
     }
 }
-@media(max-width:767px){
+/* @media(max-width:767px){
     .contact .info .social{
         font-size: 12px;
     }
-}
+} */
 @media(max-width:767px){
     .contact .info .social a i{
         font-size: 15px;
