@@ -85,8 +85,18 @@ html{
     width:60px;
 }
 /* add padding to header (not to start from beginning)*/
+/* old header*/
+/* .header {
+    padding:20px;
+} */
+/*new fixed header at the top*/
 .header {
     padding:20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background-color:white;
 }
 /* Adjust header items*/
 .header .container {
